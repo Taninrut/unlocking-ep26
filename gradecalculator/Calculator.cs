@@ -9,7 +9,7 @@ namespace gradecalculator
             // Score 0-100
             if (score<0 || score > 100)
             {
-                return " some thing wrong";
+                return "some thing wrong";
             }
             else if (score>80)
             {
@@ -33,7 +33,7 @@ namespace gradecalculator
             }
             else
             {
-                 return " some thing wrong";
+                 return "some thing wrong";
             }          
         }
     }

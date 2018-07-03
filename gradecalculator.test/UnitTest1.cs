@@ -8,7 +8,7 @@ namespace gradecalculator.test
 {
     public class UnitTest1
     {
-        [Theory(DisplayName="ทดสอบ")]
+        [Theory(DisplayName="คะแนนสามารถตัดเกรดได้สำเร็จ")]
         [InlineData(99,"A")]
         [InlineData(81,"A")]
         [InlineData(80,"B")]
@@ -22,5 +22,19 @@ namespace gradecalculator.test
 
             x.Should().Be(expectedResult);
         }
+
+        [Theory(DisplayName="คะแนนสามารถตัดเกรดได้สำเร็จ")]
+        [InlineData(105,"some thing wrong")]
+        [InlineData(-10,"some thing wrong")]
+        public void CalCulatorFail(int input, string expectedResult)
+        {
+            var cal = new Calculator();
+            var x = cal.GradeCalculator(input);
+
+            x.Should().Be(expectedResult);
+        }
+
+
+
     }
 }
