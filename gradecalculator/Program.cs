@@ -21,8 +21,6 @@ namespace gradecalculator
             {
                 Console.Write("Input Error");
             }
-
-
          
         }
     }

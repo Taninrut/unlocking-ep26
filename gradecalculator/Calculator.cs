@@ -5,13 +5,8 @@ namespace gradecalculator
     public class Calculator
     {
         public string GradeCalculator(int score)
-        {
-            // Score 0-100
-            if (score<0 || score > 100)
-            {
-                return "some thing wrong";
-            }
-            else if (score>80)
+        {    
+            if (score>80)
             {
                 return "A";
             }
@@ -27,7 +22,7 @@ namespace gradecalculator
             {
                 return "D";
             }
-            else if (score>0)
+            else if (score<=50)
             {
                 return "F";
             }
